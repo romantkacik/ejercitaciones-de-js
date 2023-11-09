@@ -83,15 +83,90 @@ const number3 = 2
 // if (number3 * 5 === number1) {
 //   console.log('number3 por 5 es igual a number1')
 //
-{
-  if (number3 * 5 && number1 * 2 == number2) {
-    console.log(
-      'number3 por 5 es igual a number1 Y number1 por 2 es igual a number2'
-    )
+// {
+//   if (number3 * 5 && number1 * 2 == number2) {
+//     console.log(
+//       'number3 por 5 es igual a number1 Y number1 por 2 es igual a number2'
+//     )
+//   }
+//   if (number2 / 2 === number1 || number1 / 5 === number3) {
+//     console.log(
+//       'number2 entre 2 es igual a number1 O number1 entre 5 es igual a number3'
+//     )
+//   }
+// }
+
+// for (let i = 0; i <= 9; i++) {
+//   console.log(i)
+// }
+
+// for (let i = 0; i <= 9; i++) {
+//   if (i % 2 === 0)
+//   console.log(i)
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   if (i === 10) {
+//     console.log(`Dormido!`)
+//   } else {
+//     console.log(`Intentando dormir`)
+//   }
+// }
+
+//!Completa la función que tomando dos números como argumento devuelva el más alto.
+
+// function sum(numberOne, numberTwo) {
+//   //? return numberOne > numberTwo ? number1 : number2 (forma corta)
+//   if (numberOne > numberTwo) {
+//     return numberOne
+//   } else {
+//     return numberTwo
+//   }
+// }
+// console.log(sum(9, 4))
+
+// const avengers = [
+//   'Hulk',
+//   'Thor',
+//   'IronMan',
+//   'Captain A.',
+//   'Spiderman',
+//   'Captain M.'
+// ]
+
+// function findLongestWord(param) {
+//   let longestWord = ''
+
+//   for (let i = 0; i < param.length; i++) {
+//     if (param[i].length > longestWord.length) {
+//       longestWord = param[i]
+//     }
+//   }
+
+//   return longestWord
+// }
+// console.log(findLongestWord(avengers))
+
+// const getName = () => {
+//   console.log('Devolviendo nombre')
+//   return 'Carlos'
+// }
+// const name = getName()
+// console.log(name)
+
+// const getSurname = () => 'Martín'
+
+// const surname = getSurname()
+
+// console.log(surname)
+
+const numbers = [1, 2, 3, 5, 45, 37, 58]
+
+function sumNumbers(arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
-  if (number2 / 2 === number1 || number1 / 5 === number3) {
-    console.log(
-      'number2 entre 2 es igual a number1 O number1 entre 5 es igual a number3'
-    )
-  }
+  return sum
 }
+console.log(sumNumbers(numbers))
