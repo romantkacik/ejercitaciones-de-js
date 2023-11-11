@@ -63,9 +63,9 @@
 // rickAndMortyCharacters.splice(1, 1)
 // console.log(rickAndMortyCharacters)
 
-const number1 = 10
-const number2 = 20
-const number3 = 2
+// const number1 = 10
+// const number2 = 20
+// const number3 = 2
 // ejemplo if(number1 === 10){
 // console.log('number1 es estrictamente igual a 10')
 
@@ -147,6 +147,8 @@ const number3 = 2
 // }
 // console.log(findLongestWord(avengers))
 
+//! Ejercicio 9
+
 // const getName = () => {
 //   console.log('Devolviendo nombre')
 //   return 'Carlos'
@@ -160,13 +162,129 @@ const number3 = 2
 
 // console.log(surname)
 
-const numbers = [1, 2, 3, 5, 45, 37, 58]
+//! Ejercicio 10
 
-function sumNumbers(arr) {
-  let sum = 0
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i]
+// const numbers = [1, 2, 3, 5, 45, 37, 58]
+
+// function sumNumbers(arr) {
+//   let sum = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i]
+//   }
+//   return sum
+// }
+// console.log(sumNumbers(numbers))
+
+//! Ejercicio 11
+
+// const numbers = [12, 21, 38, 5, 45, 37, 6]
+
+// function average(param) {
+//   let sum = 0
+//   for (let i = 0; i < param.length; i++) {
+//     sum += param[i]
+//   }
+//   let avg = sum / param.length
+//   return avg
+// }
+
+// console.log(average(numbers))
+
+//! Ejercicio 12
+
+// const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub']
+
+// function averageWord(param) {
+//   let sum = 0
+
+//   for (let i = 0; i < param.length; i++) {
+//     if (typeof param[i] === 'number') {
+//       sum += param[i]
+//     } else if (typeof param[i] === 'string') {
+//       sum += param[i].length
+//     }
+//   }
+//   return sum / param.length
+// }
+
+// console.log(averageWord(mixedElements))
+
+//! Ejercicio 13 : Valores únicos: Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+
+// const duplicates = [
+//   'sushi',
+//   'pizza',
+//   'burger',
+//   'potatoe',
+//   'pasta',
+//   'ice-cream',
+//   'pizza',
+//   'chicken',
+//   'onion rings',
+//   'pasta',
+//   'soda'
+// ]
+
+// function removeDuplicates(param) {
+//   let uniqueElements = []
+
+//   for (let i = 0; i < param.length; i++) {
+//     if (uniqueElements.indexOf(param[i]) === -1) {
+//       uniqueElements.push(param[i])
+//     }
+//   }
+//   return uniqueElements
+// }
+
+// console.log(removeDuplicates(duplicates))
+
+//! Ejercicio 14 : Buscador de nombres: Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve un true y la posición de dicho elemento y por la contra un false. Puedes usar este array para probar tu función:
+
+// const nameFinder = [
+//   'Peter',
+//   'Steve',
+//   'Tony',
+//   'Natasha',
+//   'Clint',
+//   'Logan',
+//   'Xabier',
+//   'Bruce',
+//   'Peggy',
+//   'Jessica',
+//   'Marc',
+// ]
+
+// function finderName(array, nameToFind) {
+//   const position = array.indexof(nameToFind)
+
+//   if (position === -1) {
+//     return [false, -1]
+//   } else {
+//     return [true, position]
+//   }
+// }
+
+// const nameToCheck = 'Natasha'
+// const result = finderName(nameFinder, nameToCheck)
+// console.log(result)
+
+function finderName(array, nameToFind) {
+  // Busca el nombre en el array
+  const position = array.indexOf(nameToFind)
+
+  // Si la posición es -1, el nombre no se encontró
+  if (position === -1) {
+    // Devuelve false porque el nombre no está en el array
+    return [false, -1]
+  } else {
+    // Devuelve true y la posición del nombre en el array
+    return [true, position]
   }
-  return sum
 }
-console.log(sumNumbers(numbers))
+
+// Ahora usaremos la función para buscar 'Natasha' en el array
+const nameToCheck = 'Natasha'
+const result = finderName(nameToFind, nameToCheck)
+
+// Mostraremos el resultado en la consola
+console.log(result)
