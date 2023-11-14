@@ -254,37 +254,56 @@
 //   'Marc',
 // ]
 
-// function finderName(array, nameToFind) {
-//   const position = array.indexof(nameToFind)
-
-//   if (position === -1) {
-//     return [false, -1]
+// function finderName(arr, nameToFind) {
+//   const index = arr.indexOf(nameToFind)
+//   if (index !== -1) {
+//     return {
+//       found: true,
+//       position: index,
+//     }
 //   } else {
-//     return [true, position]
+//     return {
+//       found: false,
+//     }
 //   }
 // }
 
-// const nameToCheck = 'Natasha'
-// const result = finderName(nameFinder, nameToCheck)
-// console.log(result)
+// // Ejemplo de uso:
+// const nameToFind = 'Steve'
+// const result = finderName(nameFinder, nameToFind)
 
-function finderName(array, nameToFind) {
-  // Busca el nombre en el array
-  const position = array.indexOf(nameToFind)
+// if (result.found) {
+//   console.log(`Se encontró '${nameToFind}' en la posición ${result.position}`)
+// } else {
+//   console.log(`No se encontró '${nameToFind}' en el array.`)
+// }
 
-  // Si la posición es -1, el nombre no se encontró
-  if (position === -1) {
-    // Devuelve false porque el nombre no está en el array
-    return [false, -1]
-  } else {
-    // Devuelve true y la posición del nombre en el array
-    return [true, position]
+//! Ejercicio 15 :Contador de repeticiones: Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.
+
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code',
+]
+
+function repeatCounter(arr) {
+  const wordCount = {}
+
+  for (const word of arr) {
+    if (wordCount[word]) {
+      wordCount[word] += 1
+    } else wordCount[word] = 1
   }
+  return wordCount
 }
 
-// Ahora usaremos la función para buscar 'Natasha' en el array
-const nameToCheck = 'Natasha'
-const result = finderName(nameToFind, nameToCheck)
-
-// Mostraremos el resultado en la consola
-console.log(result)
+const wordCounts = repeatCounter(counterWords)
+console.log(wordCounts)
