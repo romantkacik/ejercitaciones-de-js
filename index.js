@@ -280,30 +280,129 @@
 
 //! Ejercicio 15 :Contador de repeticiones: Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.
 
-const counterWords = [
-  'code',
-  'repeat',
-  'eat',
-  'sleep',
-  'code',
-  'enjoy',
-  'sleep',
-  'code',
-  'enjoy',
-  'upgrade',
-  'code',
+// const counterWords = [
+//   'code',
+//   'repeat',
+//   'eat',
+//   'sleep',
+//   'code',
+//   'enjoy',
+//   'sleep',
+//   'code',
+//   'enjoy',
+//   'upgrade',
+//   'code',
+// ]
+
+// function repeatCounter(arr) {
+//   const wordCount = {}
+
+//   for (const word of arr) {
+//     if (wordCount[word]) {
+//       wordCount[word] += 1
+//     } else wordCount[word] = 1
+//   }
+//   return wordCount
+// }
+
+// const wordCounts = repeatCounter(counterWords)
+// console.log(wordCounts)
+
+//!Ejercicio [16] Usa includes: Haz un bucle y muestra por consola todos aquellos valores del array que incluyan la palabra "Camiseta". Usa la función .includes de javascript.
+
+// const products = [
+//   'Camiseta de Pokemon',
+//   'Pantalón coquinero',
+//   'Gorra de gansta',
+//   'Camiseta de Basket',
+//   'Cinturón de Orión',
+//   'AC/DC Camiseta',
+// ]
+
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].includes('Camiseta')) {
+//     console.log(products[i])
+//   }
+// }
+
+//! 17 Probando For...of: Usa un bucle forof para recorrer todos los destinos del array. Imprime en un console.log sus valores. Puedes usar este array:
+
+// const placesToTravel = [
+//   'Japon',
+//   'Venecia',
+//   'Murcia',
+//   'Santander',
+//   'Filipinas',
+//   'Madagascar',
+// ]
+
+// for (let travel of placesToTravel) {
+//   console.log(travel)
+// }
+
+//! 18 Usa un for...in para imprimir por consola los datos del alienígena.. Puedes usar este objeto:
+
+// const alien = {
+//   name: 'Wormuck',
+//   race: 'Cucusumusu',
+//   planet: 'Eden',
+//   weight: '259kg',
+// }
+
+// for (const key in alien) {
+//   if (alien.hasOwnProperty(key)) {
+//     console.log(`${key}: ${alien[key]}`)
+//   }
+// }
+
+//! 18 Probando For: Usa un bucle for para recorrer todos los destinos del array y elimina los elementos que tengan el id 11 y 40. Imprime en un console log el array. Puedes usar este array:
+
+// const placesToTravel = [
+//   { id: 5, name: 'Japan' },
+//   { id: 11, name: 'Venecia' },
+//   { id: 23, name: 'Murcia' },
+//   { id: 40, name: 'Santander' },
+//   { id: 44, name: 'Madrid' },
+// ]
+
+// // Recorremos el array en orden inverso
+// for (let i = placesToTravel.length - 1; i >= 0; i--) {
+//   // Verificamos si el id es 11 o 40
+//   if (placesToTravel[i].id === 11 || placesToTravel[i].id === 40) {
+//     // Eliminamos el elemento actual del array
+//     placesToTravel.splice(i, 1)
+//   }
+// }
+
+// // Imprimimos el array modificado en la consola
+// console.log(placesToTravel)
+
+//! Mixed For...of e includes: Usa un bucle for...of para recorrer todos los juguetes y elimina los que incluyan la palabra gato. Recuerda que puedes usar la función .includes() para comprobarlo.Puedes usar este array:
+
+// const toys = [
+//   { id: 5, name: 'Buzz MyYear' },
+//   { id: 11, name: 'Action Woman' },
+//   { id: 23, name: 'Barbie Man' },
+//   { id: 40, name: 'El gato con Guantes' },
+//   { id: 40, name: 'El gato felix' },
+// ]
+// const filterToys = toys.filter((toy) => !toy.name.includes('gato'))
+// console.log(filterToys)
+
+//! Usa un bucle for...of para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola.. Puedes usar este array:
+
+const popularToys = []
+const toys = [
+  { id: 5, name: 'Buzz MyYear', sellCount: 10 },
+  { id: 11, name: 'Action Woman', sellCount: 24 },
+  { id: 23, name: 'Barbie Man', sellCount: 15 },
+  { id: 40, name: 'El gato con Guantes', sellCount: 8 },
+  { id: 40, name: 'El gato felix', sellCount: 35 },
 ]
 
-function repeatCounter(arr) {
-  const wordCount = {}
-
-  for (const word of arr) {
-    if (wordCount[word]) {
-      wordCount[word] += 1
-    } else wordCount[word] = 1
+for (const toy of toys) {
+  if (toy.sellCount > 15) {
+    popularToys.push(toy)
   }
-  return wordCount
 }
-
-const wordCounts = repeatCounter(counterWords)
-console.log(wordCounts)
+console.log(popularToys)
